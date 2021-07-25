@@ -1,6 +1,6 @@
 import React from "react"
-import { FC } from "react"
 import styles from "./Starship.module.scss"
+import * as selector from "./../../../redux/selectors/selectors"
 import BTLYwing from "./../../../common/starships/BTL-Y-wing.png"
 import EF76NebulonBescortfrigate from "./../../../common/starships/EF76-Nebulon-B-escort-frigate.jpeg"
 import Executorclassstardreadnought from "./../../../common/starships/Executor-class-star-dreadnought.png"
@@ -10,10 +10,17 @@ import ImperialIclassStarDestroyer from "./../../../common/starships/Imperial-I-
 import LambdaclassT4ashuttle from "./../../../common/starships/Lambda-class-T-4a-shuttle.png"
 import T65Xwing from "./../../../common/starships/T-65-X-wing.png"
 import YT1300lightfreighter from "./../../../common/starships/YT-1300-light-freighter.jpeg"
+import { useDispatch, useSelector } from "react-redux"
+import { Starship as StarshipType } from "../../../types"
+import {
+  removeStarshipFavorites,
+  setStarshipFavorites,
+} from "../../../redux/actions/starships"
 
 export type StarshipProps = {
   name: string
   model: string
+  starship: StarshipType
 }
 
 const starshipsImg: Record<string, string> = {
@@ -28,8 +35,12 @@ const starshipsImg: Record<string, string> = {
   "YT-1300 light freighter": YT1300lightfreighter,
 }
 
-const Starship = ({ name, model }: StarshipProps) => {
+const Starship = ({ name, model, starship }: StarshipProps) => {
+  const dispatch = useDispatch()
   const imageSrc = starshipsImg[model]
+  const starshipsFavorites = useSelector(
+    selector.starships.starshipsFavoritesSelector
+  )
 
   return (
     <div className={styles.body}>
@@ -41,8 +52,27 @@ const Starship = ({ name, model }: StarshipProps) => {
       <div className={styles.name}>{name}</div>
       <div className={styles.model}>{model}</div>
       <div className={styles.isComparison}>
-        <button className={styles.add}>Add</button>
-        <button className={styles.remove}>Remove</button>
+        {starshipsFavorites.some(
+          (favoriteModel) => favoriteModel.model === model
+        ) ? (
+          <button
+            onClick={() => {
+              dispatch(removeStarshipFavorites(model))
+            }}
+            className={styles.remove}
+          >
+            Remove
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              dispatch(setStarshipFavorites(starship))
+            }}
+            className={styles.add}
+          >
+            Add
+          </button>
+        )}
       </div>
     </div>
   )

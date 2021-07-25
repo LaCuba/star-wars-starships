@@ -11,3 +11,21 @@ export const setStarships = createCustomAction(
     },
   })
 )
+
+export const setStarshipFavorites = createCustomAction(
+  "search/SET-STARSHIP-FAVORITE",
+  (starship: Starship) => ({
+    payload: {
+      starship,
+    },
+  })
+)
+
+export const removeStarshipFavorites = createCustomAction(
+  "search/REMOVE-STARSHIP-FAVORITE",
+  (model: string) => ({
+    payload: {
+      model,
+    },
+  })
+)

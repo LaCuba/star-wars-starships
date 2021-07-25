@@ -4,9 +4,8 @@ import { requestStarships } from "../../redux/actions/starships"
 import styles from "./Main.module.scss"
 import Starship from "./Starship/Starship"
 import * as selector from "./../../redux/selectors/selectors"
-import { FC } from "react"
 
-const Main: FC = () => {
+const Main = () => {
   const starships = useSelector(selector.starships.starshipsSelector)
   const dispatch = useDispatch()
 
@@ -25,6 +24,7 @@ const Main: FC = () => {
             key={starship.model}
             name={starship.name}
             model={starship.model}
+            starship={starship}
           />
         ))}
       </div>

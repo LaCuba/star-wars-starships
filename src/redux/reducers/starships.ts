@@ -5,10 +5,12 @@ import actions, { Actions } from "../actions/actions"
 
 export type InitialStateType = {
   starships: Array<Starship>
+  starshipsFavorites: Array<Starship>
 }
 
 export const initialState = {
   starships: [],
+  starshipsFavorites: [],
 }
 
 const SearchReducer: Reducer<InitialStateType, Actions> = (
@@ -20,6 +22,23 @@ const SearchReducer: Reducer<InitialStateType, Actions> = (
       return {
         ...state,
         starships: action.payload.starships,
+      }
+    }
+    case getType(actions.starships.setStarshipFavorites): {
+      return {
+        ...state,
+        starshipsFavorites: [
+          ...state.starshipsFavorites,
+          action.payload.starship,
+        ],
+      }
+    }
+    case getType(actions.starships.removeStarshipFavorites): {
+      return {
+        ...state,
+        starshipsFavorites: state.starshipsFavorites.filter(
+          (starship) => starship.model !== action.payload.model
+        ),
       }
     }
     default:
