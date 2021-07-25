@@ -8,7 +8,7 @@ export const starshipsApi: any = {
   getFilm(episode: number) {
     return instance.get(`films/${episode}/`)
   },
-  getStarhips() {
-    return instance.get(`films/`)
+  getStarhips(url: string) {
+    return axios.get(url).then((response) => response.data)
   },
 }
