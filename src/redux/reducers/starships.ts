@@ -1,13 +1,16 @@
 import { Reducer } from "redux"
 import { getType } from "typesafe-actions"
+import { Starship } from "../../types"
 import actions, { Actions } from "../actions/actions"
 
 export type InitialStateType = {
   starshipsUrls: Array<string>
+  starships: Array<Starship>
 }
 
 export const initialState = {
   starshipsUrls: [],
+  starships: [],
 }
 
 const SearchReducer: Reducer<InitialStateType, Actions> = (
@@ -19,6 +22,12 @@ const SearchReducer: Reducer<InitialStateType, Actions> = (
       return {
         ...state,
         starshipsUrls: action.payload.urls,
+      }
+    }
+    case getType(actions.starships.setStarships): {
+      return {
+        ...state,
+        starships: action.payload.starships,
       }
     }
     default:
