@@ -20,3 +20,19 @@
   gap: 40px;
   overflow-x: auto;
 }
+
+.comparisonBtnContainer {
+  width: 100%;
+  margin: 50px auto;
+
+  display: grid;
+  justify-items: center;
+}
+
+.comparisonBtn {
+  padding: 12px 24px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}

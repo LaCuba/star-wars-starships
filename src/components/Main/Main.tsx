@@ -16,7 +16,7 @@ const Main = () => {
   return (
     <div className={styles.body}>
       <header className={styles.header}>
-        <div className={styles.title}>STAR WARS</div>
+        <h1 className={styles.title}>STAR WARS</h1>
       </header>
       <div className={styles.main}>
         {starships.map((starship) => (
@@ -27,6 +27,9 @@ const Main = () => {
             starship={starship}
           />
         ))}
+      </div>
+      <div className={styles.comparisonBtnContainer}>
+        <button className={styles.comparisonBtn}>Сравнить</button>
       </div>
     </div>
   )
