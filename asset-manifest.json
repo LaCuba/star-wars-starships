@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/star-wars-starships/static/css/main.cb2e0621.chunk.css",
+    "main.js": "/star-wars-starships/static/js/main.dee828e4.chunk.js",
+    "main.js.map": "/star-wars-starships/static/js/main.dee828e4.chunk.js.map",
+    "runtime-main.js": "/star-wars-starships/static/js/runtime-main.b2d517fd.js",
+    "runtime-main.js.map": "/star-wars-starships/static/js/runtime-main.b2d517fd.js.map",
+    "static/js/2.a97b3d47.chunk.js": "/star-wars-starships/static/js/2.a97b3d47.chunk.js",
+    "static/js/2.a97b3d47.chunk.js.map": "/star-wars-starships/static/js/2.a97b3d47.chunk.js.map",
+    "index.html": "/star-wars-starships/index.html",
+    "static/css/main.cb2e0621.chunk.css.map": "/star-wars-starships/static/css/main.cb2e0621.chunk.css.map",
+    "static/js/2.a97b3d47.chunk.js.LICENSE.txt": "/star-wars-starships/static/js/2.a97b3d47.chunk.js.LICENSE.txt",
+    "static/media/BTL-Y-wing.f41cc8b7.png": "/star-wars-starships/static/media/BTL-Y-wing.f41cc8b7.png",
+    "static/media/EF76-Nebulon-B-escort-frigate.6da7895f.jpeg": "/star-wars-starships/static/media/EF76-Nebulon-B-escort-frigate.6da7895f.jpeg",
+    "static/media/Executor-class-star-dreadnought.a4277e23.png": "/star-wars-starships/static/media/Executor-class-star-dreadnought.a4277e23.png",
+    "static/media/Firespray-31-class-patrol-and-attack.38be25b5.png": "/star-wars-starships/static/media/Firespray-31-class-patrol-and-attack.38be25b5.png",
+    "static/media/GR-75-medium-transport.8e5b5d93.png": "/star-wars-starships/static/media/GR-75-medium-transport.8e5b5d93.png",
+    "static/media/Imperial-I-class-Star-Destroyer.8ba0ac03.png": "/star-wars-starships/static/media/Imperial-I-class-Star-Destroyer.8ba0ac03.png",
+    "static/media/Lambda-class-T-4a-shuttle.a6e79620.png": "/star-wars-starships/static/media/Lambda-class-T-4a-shuttle.a6e79620.png",
+    "static/media/T-65-X-wing.99f292e9.png": "/star-wars-starships/static/media/T-65-X-wing.99f292e9.png",
+    "static/media/YT-1300-light-freighter.c3278159.jpeg": "/star-wars-starships/static/media/YT-1300-light-freighter.c3278159.jpeg",
+    "static/media/App.module.scss": "/star-wars-starships/static/media/background.31ceb4dd.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2d517fd.js",
+    "static/js/2.a97b3d47.chunk.js",
+    "static/css/main.cb2e0621.chunk.css",
+    "static/js/main.dee828e4.chunk.js"
+  ]
+}
