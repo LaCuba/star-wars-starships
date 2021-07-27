@@ -1,0 +1,28 @@
+.starship {
+  min-width: 200px;
+  display: grid;
+  grid-template-rows: 150px repeat(13, 50px);
+  justify-items: center;
+  overflow-x: scroll;
+}
+
+.starshipValueContainer {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  display: grid;
+}
+
+.starshipValue {
+  align-self: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.image {
+  border-left: 1px solid #fff;
+  max-width: 250px;
+  width: 100%;
+  height: 150px;
+}

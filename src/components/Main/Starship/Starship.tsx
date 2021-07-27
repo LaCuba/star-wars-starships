@@ -23,7 +23,7 @@ export type StarshipProps = {
   starship: StarshipType
 }
 
-const starshipsImg: Record<string, string> = {
+export const starshipsImg: Record<string, string> = {
   "BTL Y-wing": BTLYwing,
   "EF76 Nebulon-B escort frigate": EF76NebulonBescortfrigate,
   "Executor-class star dreadnought": Executorclassstardreadnought,
@@ -38,9 +38,7 @@ const starshipsImg: Record<string, string> = {
 const Starship = ({ name, model, starship }: StarshipProps) => {
   const dispatch = useDispatch()
   const imageSrc = starshipsImg[model]
-  const starshipsFavorites = useSelector(
-    selector.starships.starshipsFavoritesSelector
-  )
+  const starshipsFavorites = useSelector(selector.starships.starshipsFavorites)
 
   return (
     <div className={styles.body}>
@@ -61,7 +59,7 @@ const Starship = ({ name, model, starship }: StarshipProps) => {
             }}
             className={styles.remove}
           >
-            Remove
+            Удалить
           </button>
         ) : (
           <button
@@ -70,7 +68,7 @@ const Starship = ({ name, model, starship }: StarshipProps) => {
             }}
             className={styles.add}
           >
-            Add
+            Добавить
           </button>
         )}
       </div>

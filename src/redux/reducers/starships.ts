@@ -6,11 +6,23 @@ import actions, { Actions } from "../actions/actions"
 export type InitialStateType = {
   starships: Array<Starship>
   starshipsFavorites: Array<Starship>
+  isComparison: boolean
+  starshipComparison: Array<keyof Starship>
 }
 
 export const initialState = {
   starships: [],
   starshipsFavorites: [],
+  isComparison: false,
+  starshipComparison: [
+    "cost_in_credits",
+    "length",
+    "max_atmosphering_speed",
+    "crew",
+    "cargo_capacity",
+    "hyperdrive_rating",
+    "MGLT",
+  ] as Array<keyof Starship>,
 }
 
 const SearchReducer: Reducer<InitialStateType, Actions> = (
@@ -39,6 +51,12 @@ const SearchReducer: Reducer<InitialStateType, Actions> = (
         starshipsFavorites: state.starshipsFavorites.filter(
           (starship) => starship.model !== action.payload.model
         ),
+      }
+    }
+    case getType(actions.starships.setIsComparison): {
+      return {
+        ...state,
+        isComparison: action.payload.isComparison,
       }
     }
     default:

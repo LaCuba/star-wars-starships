@@ -29,3 +29,12 @@ export const removeStarshipFavorites = createCustomAction(
     },
   })
 )
+
+export const setIsComparison = createCustomAction(
+  "search/SET-IS-COMPARIOSON",
+  (isComparison: boolean) => ({
+    payload: {
+      isComparison,
+    },
+  })
+)

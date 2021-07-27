@@ -1,0 +1,94 @@
+.modal,
+.modalActive {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalActive {
+  display: flex;
+}
+
+.body {
+  max-width: 75%;
+  width: 75%;
+  height: 75%;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 25px;
+  gap: 10px;
+  align-items: start;
+
+  margin-bottom: 20px;
+
+  .headerTitle {
+    justify-self: center;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  .cancel {
+    font-size: 20px;
+    font-weight: 700;
+    justify-self: center;
+    cursor: pointer;
+  }
+}
+
+.starships {
+  height: 89%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  overflow-y: scroll;
+  border: 1px solid #fff;
+}
+
+.titles {
+  display: grid;
+  width: 200px;
+  grid-template-rows: 150px repeat(13, 50px);
+
+  .titleContainer {
+    border: solid 1px #fff;
+    display: grid;
+  }
+
+  .title {
+    align-self: center;
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+  }
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.starshipValueContainer {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fff;
+  display: grid;
+}
+
+.starshipValue {
+  align-self: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
