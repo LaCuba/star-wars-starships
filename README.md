@@ -1,6 +1,6 @@
 ## Comparison of starships from Star Wars V
 
-<img src="./public/screenApp.png">
+<img src="./public/screenImg.png">
 
 ### Technologies:
 
